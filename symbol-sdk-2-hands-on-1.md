@@ -133,7 +133,7 @@ console.log(greeting);
 以下のコマンドを実行して`Hello World`と表示されることを確認してください。
 
 ```shell
-~/symbol-sdk-hands-on$ npx ts-node hello-world.ts
+~/symbol-sdk-hands-on$ npx ts-node 0_hello-world.ts
 
 ```
 
