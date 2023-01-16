@@ -55,7 +55,7 @@ nvm( [https://github.com/nvm-sh/nvm#installing-and-updating](https://github.com/
 
 ```shell
 # GitHubからnvmをダウンロードしてインストール
-~$ ~/curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # nvmを利用可能な状態にする
 ~$ source ~/.bashrc
@@ -190,9 +190,12 @@ symbol-sdkを利用して、アカウント情報を取得するプログラム�
 import { firstValueFrom } from "rxjs";
 import { RepositoryFactoryHttp, Address } from "symbol-sdk";
 
+// ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みのものを指定ください
 const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
 const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const accountRepository = repositoryFactoryHttp.createAccountRepository();
+
+// アドレスはご自身のアドレスに置き換えてください
 const rawAddress = "TACDCQIQYRZ3L7ARKSQBAVDQZJQ6PPGY4K2SSCY";
 const address = Address.createFromRawAddress(rawAddress);
 
@@ -276,10 +279,12 @@ import {
   UInt64,
 } from "symbol-sdk";
 
+// ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みのものを指定ください
 const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
 const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const accountRepository = repositoryFactoryHttp.createAccountRepository();
 
+// アドレスはご自身のアドレスに置き換えてください
 const rawAddress = "TACDCQIQYRZ3L7ARKSQBAVDQZJQ6PPGY4K2SSCY";
 const address = Address.createFromRawAddress(rawAddress);
 
@@ -361,6 +366,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 (async () => {
+  // ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みのものを指定ください
   const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
   const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 
@@ -391,6 +397,7 @@ dotenv.config();
 
   // Sender account info
   const senderRawPrivateKey = process.env.SYMBOL_TESTNET_PRIVATE_KEY!;
+  // アドレスはご自身のアドレスに置き換えてください
   const senderRawAddress = "TACDCQIQYRZ3L7ARKSQBAVDQZJQ6PPGY4K2SSCY";
   const senderAccount = Account.createFromPrivateKey(
     senderRawPrivateKey,
