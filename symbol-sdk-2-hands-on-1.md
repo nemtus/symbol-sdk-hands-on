@@ -187,17 +187,14 @@ symbol-sdkを利用して、アカウント情報を取得するプログラム�
 `1-0_get-account-info.ts`というファイル名で以下のようなファイルを作成してください。
 
 ```ts:1-0_get-account-info.ts
-import * as rxjs from "rxjs";
-import * as symbolSdk from "symbol-sdk";
+import { firstValueFrom } from "rxjs";
+import { RepositoryFactoryHttp, Address } from "symbol-sdk";
 
-// ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みの物に置き換えてくださって構いません。
 const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
-const repositoryFactoryHttp = new symbolSdk.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const accountRepository = repositoryFactoryHttp.createAccountRepository();
-
-// アドレスはご自身のアドレスに置き換えてください。
 const rawAddress = "TACDCQIQYRZ3L7ARKSQBAVDQZJQ6PPGY4K2SSCY";
-const address = symbolSdk.Address.createFromRawAddress(rawAddress);
+const address = Address.createFromRawAddress(rawAddress);
 
 // RxJS
 accountRepository.getAccountInfo(address).subscribe((accountInfo) => {
@@ -205,12 +202,10 @@ accountRepository.getAccountInfo(address).subscribe((accountInfo) => {
 });
 
 // Async/Await
-(async () => {
-  const accountInfo = await rxjs.firstValueFrom(
-    accountRepository.getAccountInfo(address)
-  );
-  console.dir({ accountInfo }, { depth: null });
-})();
+const accountInfo = await firstValueFrom(
+  accountRepository.getAccountInfo(address)
+);
+console.dir({ accountInfo }, { depth: null });
 
 ```
 
