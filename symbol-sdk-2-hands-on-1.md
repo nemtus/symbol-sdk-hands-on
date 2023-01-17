@@ -205,10 +205,12 @@ accountRepository.getAccountInfo(address).subscribe((accountInfo) => {
 });
 
 // Async/Await
-const accountInfo = await firstValueFrom(
-  accountRepository.getAccountInfo(address)
-);
-console.dir({ accountInfo }, { depth: null });
+(async () => {
+  const accountInfo = await firstValueFrom(
+    accountRepository.getAccountInfo(address)
+  );
+  console.dir({ accountInfo }, { depth: null });
+})()
 
 ```
 
