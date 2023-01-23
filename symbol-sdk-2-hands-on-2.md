@@ -17,7 +17,7 @@
 
 ### 前回作成フォーセットのアドレスと追加作成したアカウントの秘密鍵とアドレスを`.env`ファイルに追記
 
-以下の`PUT_YOUR_PRIVATE_KEY`, `PUT_YOUR_ADDRESS`の箇所は、ご自身の
+以下の`PUT_YOUR_PRIVATE_KEY`, `PUT_YOUR_ADDRESS`の箇所は、ご自身のものに置き換えてください。
 
 ```env
 # 前回のsymbol-sdk@2 ハンズオン #1でセット済のものをそのまま使えばOK
@@ -25,7 +25,6 @@ SYMBOL_TESTNET_PRIVATE_KEY="PUT_YOUR_PRIVATE_KEY"
 
 # 今回のsymbol-sdk@2 ハンズオン #2で新たにセットする必要があるもの
 SYMBOL_TESTNET_ADDRESS="PUT_YOUR_ADDRESS"
-
 SYMBOL_TESTNET_FAUCET_ADDRESS="PUT_YOUR_ADDRESS"
 SYMBOL_TESTNET_MULTISIG_PRIVATE_KEY="PUT_YOUR_PRIVATE_KEY"
 SYMBOL_TESTNET_MULTISIG_ADDRESS="PUT_YOUR_ADDRESS"
