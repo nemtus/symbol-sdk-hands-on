@@ -58,7 +58,7 @@ dotenv.config();
   const deadline = Deadline.create(epochAdjustment); // デフォルトは2時間後
   const recipientRawAddress = process.env.SYMBOL_TESTNET_FAUCET_ADDRESS!;
   const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
-  const relativeAmount = 1; // 500[XYM]送信 = 10*10^divisibility[μXYM]送信
+  const relativeAmount = 500; // 500[XYM]送信 = 500*10^divisibility[μXYM]送信
   const absoluteAmount =
     relativeAmount * parseInt("1" + "0".repeat(networkCurrencyDivisibility)); // networkCurrencyDivisibility = 6 => 1[XYM] = 10^6[μXYM]
   const absoluteAmountUInt64 = UInt64.fromUint(absoluteAmount);
