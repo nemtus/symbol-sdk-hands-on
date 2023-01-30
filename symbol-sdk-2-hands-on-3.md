@@ -18,6 +18,10 @@
 - Alice (on Canade)
 - Bob (on Canade)
 
+Canadeブロックチェーン関連の情報は以下リンクをご参照ください。
+
+[https://github.com/siamreiwa/canade-cbdp-community-test/blob/main/README.MD](https://github.com/siamreiwa/canade-cbdp-community-test/blob/main/README.MD)
+
 ### AliceとBobのアカウントの秘密鍵とアドレスを`.env`ファイルに追記
 
 以下の`PUT_YOUR_PRIVATE_KEY`, `PUT_YOUR_ADDRESS`の箇所は、ご自身のものに置き換えてください。
