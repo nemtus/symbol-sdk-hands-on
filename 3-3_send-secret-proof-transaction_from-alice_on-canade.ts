@@ -12,7 +12,7 @@ dotenv.config();
 
 (async () => {
   // Get symbol network info
-  const symbolNodeUrl = "https://sym-test-04.opening-line.jp:3001";
+  const symbolNodeUrl = "https://sym-test-03.opening-line.jp:3001";
   const symbolRepositoryFactoryHttp = new RepositoryFactoryHttp(symbolNodeUrl);
 
   const symbolNetworkType = await firstValueFrom(

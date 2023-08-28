@@ -191,7 +191,7 @@ import { firstValueFrom } from "rxjs";
 import { RepositoryFactoryHttp, Address } from "symbol-sdk";
 
 // ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みのものを指定ください
-const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
+const nodeUrl = "https://sym-test-03.opening-line.jp:3001";
 const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const accountRepository = repositoryFactoryHttp.createAccountRepository();
 
@@ -282,7 +282,7 @@ import {
 } from "symbol-sdk";
 
 // ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みのものを指定ください
-const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
+const nodeUrl = "https://sym-test-03.opening-line.jp:3001";
 const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const accountRepository = repositoryFactoryHttp.createAccountRepository();
 
@@ -369,7 +369,7 @@ dotenv.config();
 
 (async () => {
   // ノードはテストネットのノードリスト(https://symbolnodes.org/nodes_testnet/)からお好みのものを指定ください
-  const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
+  const nodeUrl = "https://sym-test-03.opening-line.jp:3001";
   const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 
   // Get network info
