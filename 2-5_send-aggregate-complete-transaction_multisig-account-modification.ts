@@ -12,7 +12,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 (async () => {
-  const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
+  const nodeUrl = "https://sym-test-03.opening-line.jp:3001";
   const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 
   // Get network info

@@ -6,7 +6,7 @@ import {
   UInt64,
 } from "symbol-sdk";
 
-const nodeUrl = "https://sym-test-04.opening-line.jp:3001";
+const nodeUrl = "https://sym-test-03.opening-line.jp:3001";
 const repositoryFactoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const accountRepository = repositoryFactoryHttp.createAccountRepository();
 
