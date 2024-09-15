@@ -39,15 +39,12 @@ const sleep = (seconds: number): Promise<void> =>
   const currencies = await firstValueFrom(
     repositoryFactoryHttp.getCurrencies(),
   );
-  await sleep(10);
   const epochAdjustment = await firstValueFrom(
     repositoryFactoryHttp.getEpochAdjustment(),
   );
-  await sleep(10);
   const generationHash = await firstValueFrom(
     repositoryFactoryHttp.getGenerationHash(),
   );
-  await sleep(10);
   const networkType = await firstValueFrom(
     repositoryFactoryHttp.getNetworkType(),
   );
